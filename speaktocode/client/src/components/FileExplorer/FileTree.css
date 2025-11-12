@@ -1,0 +1,95 @@
+.tree-item {
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+  user-select: none;
+  position: relative;
+}
+
+.tree-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tree-item:hover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-accent);
+}
+
+.tree-item.active {
+  background: var(--color-accent);
+  color: white;
+}
+
+.tree-item.folder {
+  font-weight: 500;
+}
+
+.tree-item.folder:hover {
+  background: rgba(0, 122, 204, 0.15);
+}
+
+.tree-item.selected {
+  background: rgba(0, 122, 204, 0.3) !important;
+  border-left: 3px solid var(--color-accent);
+  padding-left: calc(4px + 8px - 3px);
+}
+
+.tree-item.drag-over {
+  background: rgba(76, 175, 80, 0.2) !important;
+  border: 2px dashed var(--color-success);
+}
+
+.tree-item .icon {
+  font-size: 14px;
+  width: 16px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tree-item .name {
+  flex: 1;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tree-children {
+  margin-left: 0;
+}
+
+/* Light Theme Overrides */
+body.light-theme .tree-item {
+  color: #333333;
+}
+
+body.light-theme .tree-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .tree-item.folder:hover {
+  background: rgba(0, 122, 204, 0.1);
+}
+
+body.light-theme .tree-item.selected {
+  background: rgba(0, 122, 204, 0.15) !important;
+}
+
+body.light-theme .tree-item.drag-over {
+  background: rgba(76, 175, 80, 0.15) !important;
+}
+
+body.light-theme .tree-item .name {
+  color: #333333;
+}

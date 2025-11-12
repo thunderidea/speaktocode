@@ -1,0 +1,30 @@
+.breadcrumb {
+  height: 25px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--color-bg-darker);
+  border-bottom: 1px solid var(--color-border);
+  font-size: 12px;
+  overflow-x: auto;
+}
+
+.breadcrumb-item {
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 3px;
+  transition: var(--transition);
+}
+
+.breadcrumb-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.breadcrumb-item.active {
+  color: var(--color-accent);
+}
+
+.breadcrumb-separator {
+  opacity: 0.5;
+}

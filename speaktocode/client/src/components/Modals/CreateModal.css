@@ -1,0 +1,9 @@
+.create-content {
+  max-width: 450px;
+  padding: 25px;
+}
+
+.create-content h3 {
+  margin-bottom: 20px;
+  color: var(--color-text-dark);
+}

@@ -1,0 +1,44 @@
+.command-palette-content {
+  padding: 0;
+  max-width: 600px;
+}
+
+.command-search {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-darkest);
+  color: var(--color-text-dark);
+  font-size: 16px;
+  outline: none;
+}
+
+.command-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.command-item {
+  padding: 12px 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.command-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.command-name {
+  font-size: 14px;
+}
+
+.command-shortcut {
+  font-size: 11px;
+  opacity: 0.6;
+  font-family: var(--font-family-mono);
+}

@@ -1,0 +1,88 @@
+.menu-bar {
+  height: var(--menu-height);
+  background: var(--color-bg-darker);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.menu-items {
+  display: flex;
+  gap: 5px;
+}
+
+.menu-item {
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: var(--transition);
+  position: relative;
+  user-select: none;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--color-bg-darker);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.menu-option {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.menu-option:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.menu-option span {
+  font-size: 11px;
+  color: var(--color-text-dark);
+  opacity: 0.7;
+}
+
+.menu-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-right .btn.active {
+  background: var(--color-success);
+  color: white;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .user-info span {
+    display: none;
+  }
+}
